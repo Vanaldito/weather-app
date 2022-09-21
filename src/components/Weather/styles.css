@@ -1,0 +1,37 @@
+.weather {
+  height: 100%;
+  position: relative;
+  max-width: 460px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 60px 20px;
+  background: linear-gradient(
+      rgba(30, 33, 58, 0.95) 100%,
+      rgba(30, 33, 58, 0.95) 100%
+    ),
+    url("/Cloud-background.png") no-repeat 50% 0%;
+  background-color: #1e213a;
+  background-size: 155%;
+}
+
+.weather__temperature {
+  font-size: 8rem;
+  color: #e7e7eb;
+  margin-bottom: 30px;
+}
+
+.weather__temperature::first-letter {
+  font-size: 7.5rem;
+  vertical-align: top;
+}
+
+.weather__temperature__unit {
+  font-size: 4rem;
+  color: #a09fb1;
+  vertical-align: middle;
+}
+
+.weather__weather {
+  font-size: 3rem;
+  color: #a09fb1;
+}

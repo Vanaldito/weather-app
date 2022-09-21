@@ -21,8 +21,6 @@ export async function getCityInfoFromLocation(
   );
   const data = await res.json();
 
-  console.log(data);
-
   return {
     city: data.address.city,
     country: data.address.country,
