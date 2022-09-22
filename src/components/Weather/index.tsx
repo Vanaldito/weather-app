@@ -1,6 +1,7 @@
 import { formatDate } from "../../helpers/formatDate";
 import { useLocation } from "../../hooks/useLocation";
 import { useWeather } from "../../hooks/useWeather";
+import WeatherImg from "../WeatherImg";
 import LocationIcon from "../Icons/Location";
 
 import "./styles.css";
@@ -15,6 +16,7 @@ export default function Weather() {
 
   return (
     <div className="weather">
+      <WeatherImg weather={weather.weather} />
       <div className="weather__temperature">
         {Math.round(weather.temperature)}
         <span className="weather__temperature__unit">°C</span>
