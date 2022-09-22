@@ -36,6 +36,18 @@
   color: #a09fb1;
 }
 
+.weather__date {
+  color: #88869d;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 20px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-75px);
+}
+
 .weather__location {
   color: #88869d;
   font-size: 1.8rem;
