@@ -35,3 +35,12 @@
   font-size: 3rem;
   color: #a09fb1;
 }
+
+.weather__location {
+  color: #88869d;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
