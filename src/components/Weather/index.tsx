@@ -3,11 +3,12 @@ import { useLocation } from "../../hooks/useLocation";
 import { useWeather } from "../../hooks/useWeather";
 import WeatherImg from "../WeatherImg";
 import LocationIcon from "../Icons/Location";
+import MyLocationIcon from "../Icons/MyLocation";
 
 import "./styles.css";
 
 export default function Weather() {
-  const location = useLocation();
+  const [location, requestLocationFromGeolocation] = useLocation();
   const weather = useWeather(location);
 
   if (!weather) {
@@ -16,6 +17,13 @@ export default function Weather() {
 
   return (
     <div className="weather">
+      <button
+        onClick={requestLocationFromGeolocation}
+        type="button"
+        className="weather__request-geolocation-button"
+      >
+        <MyLocationIcon />
+      </button>
       <WeatherImg weather={weather.weather} />
       <div className="weather__temperature">
         {Math.round(weather.temperature)}
