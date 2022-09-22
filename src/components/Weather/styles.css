@@ -1,4 +1,10 @@
 .weather {
+  overflow: auto;
+  display: grid;
+  grid-template-rows: 1fr repeat(4, max-content);
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
   height: 100%;
   position: relative;
   max-width: 460px;
@@ -15,37 +21,34 @@
 }
 
 .weather__temperature {
-  font-size: 8rem;
+  font-size: 14.4rem;
   color: #e7e7eb;
-  margin-bottom: 30px;
-}
-
-.weather__temperature::first-letter {
-  font-size: 7.5rem;
-  vertical-align: top;
+  margin-bottom: 5vh;
 }
 
 .weather__temperature__unit {
-  font-size: 4rem;
+  font-size: 4.8rem;
   color: #a09fb1;
-  vertical-align: middle;
 }
 
 .weather__weather {
-  font-size: 3rem;
+  font-size: 3.6rem;
+  font-weight: 600;
   color: #a09fb1;
+  margin-bottom: 48px;
 }
 
 .weather__date {
   color: #88869d;
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   display: flex;
   align-items: center;
   width: max-content;
   gap: 20px;
   position: relative;
   left: 50%;
-  transform: translateX(-75px);
+  transform: translateX(-90px);
+  margin-bottom: 30px;
 }
 
 .weather__location {
