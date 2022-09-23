@@ -26,7 +26,6 @@ export function useLocation() {
           lat,
           lon,
           city: data.city,
-          country: data.country,
         });
       });
     }
@@ -40,7 +39,6 @@ export function useLocation() {
     getLocationFromCity(city).then(data => {
       setLocationInfo({
         city: city,
-        country: "",
         lat: data.lat,
         lon: data.lon,
       });

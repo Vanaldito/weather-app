@@ -1,6 +1,5 @@
 interface CityInfo {
   city: string;
-  country: string;
 }
 
 export async function getCityInfoFromLocation(
@@ -23,6 +22,5 @@ export async function getCityInfoFromLocation(
 
   return {
     city: data.address.city,
-    country: data.address.country,
   };
 }

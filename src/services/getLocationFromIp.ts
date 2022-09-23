@@ -9,6 +9,5 @@ export async function getLocationFromIp(): Promise<LocationInfo> {
     lat: data.lat,
     lon: data.lon,
     city: data.city,
-    country: data.country,
   };
 }
