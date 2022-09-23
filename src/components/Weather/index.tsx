@@ -1,6 +1,7 @@
 import { formatDate } from "../../helpers/formatDate";
 import { useLocation } from "../../hooks/useLocation";
 import { useWeather } from "../../hooks/useWeather";
+import WeatherSearch from "../WeatherSearch";
 import WeatherImg from "../WeatherImg";
 import LocationIcon from "../Icons/Location";
 import MyLocationIcon from "../Icons/MyLocation";
@@ -17,13 +18,16 @@ export default function Weather() {
 
   return (
     <div className="weather">
-      <button
-        onClick={requestLocationFromGeolocation}
-        type="button"
-        className="weather__request-geolocation-button"
-      >
-        <MyLocationIcon />
-      </button>
+      <div className="weather__actions">
+        <WeatherSearch />
+        <button
+          onClick={requestLocationFromGeolocation}
+          type="button"
+          className="weather__request-geolocation-button"
+        >
+          <MyLocationIcon />
+        </button>
+      </div>
       <WeatherImg weather={weather.weather} />
       <div className="weather__temperature">
         {Math.round(weather.temperature)}
