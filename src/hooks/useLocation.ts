@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { getCityInfoFromLocation } from "../services/getCityInfoFromLocation";
+import { getLocationFromCity } from "../services/getLocationFromCity";
 import { getLocationFromIp } from "../services/getLocationFromIp";
 import { LocationInfo } from "../types";
 
-export function useLocation(): [LocationInfo | null, () => void] {
+export function useLocation() {
   const [locationInfo, setLocationInfo] = useState<LocationInfo | null>(null);
 
   useEffect(() => {
@@ -35,5 +36,20 @@ export function useLocation(): [LocationInfo | null, () => void] {
     }
   }
 
-  return [locationInfo, requestLocationFromGeolocation];
+  function requestLocationFromCity(city: string) {
+    getLocationFromCity(city).then(data => {
+      setLocationInfo({
+        city: city,
+        country: "",
+        lat: data.lat,
+        lon: data.lon,
+      });
+    });
+  }
+
+  return {
+    locationInfo,
+    requestLocationFromGeolocation,
+    requestLocationFromCity,
+  };
 }

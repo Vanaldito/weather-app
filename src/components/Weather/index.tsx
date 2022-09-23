@@ -9,7 +9,11 @@ import MyLocationIcon from "../Icons/MyLocation";
 import "./styles.css";
 
 export default function Weather() {
-  const [location, requestLocationFromGeolocation] = useLocation();
+  const {
+    locationInfo: location,
+    requestLocationFromGeolocation,
+    requestLocationFromCity,
+  } = useLocation();
   const weather = useWeather(location);
 
   if (!weather) {
@@ -19,7 +23,7 @@ export default function Weather() {
   return (
     <div className="weather">
       <div className="weather__actions">
-        <WeatherSearch />
+        <WeatherSearch searchCity={requestLocationFromCity} />
         <button
           onClick={requestLocationFromGeolocation}
           type="button"

@@ -3,7 +3,12 @@ import CloseIcon from "../Icons/Close";
 
 import "./styles.css";
 
-export default function WeatherSearch() {
+interface WeatherSearchProps {
+  searchCity: (city: string) => void;
+}
+
+export default function WeatherSearch({ searchCity }: WeatherSearchProps) {
+  const [city, setCity] = useState("");
   const [displayMenu, setDisplayMenu] = useState(false);
 
   function openMenu() {
@@ -11,6 +16,20 @@ export default function WeatherSearch() {
   }
 
   function closeMenu() {
+    setDisplayMenu(false);
+  }
+
+  function changeCity(event: React.ChangeEvent<HTMLInputElement>) {
+    setCity(event.target.value);
+  }
+
+  function submitHandler(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (!city) return;
+    searchCity(city);
+
+    setCity("");
     setDisplayMenu(false);
   }
 
@@ -35,11 +54,13 @@ export default function WeatherSearch() {
         >
           <CloseIcon />
         </button>
-        <form className="weather-search__form">
+        <form className="weather-search__form" onSubmit={submitHandler}>
           <input
             className="weather-search__input"
             type="text"
             placeholder="Search Location"
+            value={city}
+            onChange={changeCity}
           />
           <button className="weather-search__search-button" type="submit">
             Search
