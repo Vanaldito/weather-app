@@ -1,0 +1,45 @@
+.forecast {
+  background-color: #100e1d;
+  padding: 52px;
+}
+
+.forecast__ul {
+  display: flex;
+  gap: 32px 25px;
+  flex-wrap: wrap;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.forecast__li {
+  width: 140px;
+  box-sizing: border-box;
+  padding: 18px 20px;
+  background-color: #1e213a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forecast__date {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #e7e7eb;
+}
+
+.forecast__temperature {
+  display: flex;
+  width: 100%;
+  font-size: 1.6rem;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.forecast__max-temperature {
+  color: #e7e7eb;
+}
+
+.forecast__min-temperature {
+  color: #a09fb1;
+}
