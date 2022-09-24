@@ -1,9 +1,10 @@
 import { useLocation } from "./hooks/useLocation";
+import { getForecastFromLocation } from "./services/getForecastFromLocation";
+
 import Weather from "./components/Weather";
+import Forecast from "./components/Forecast";
 
 import "./App.css";
-import { getForecastFromLocation } from "./services/getForecastFromLocation";
-import Forecast from "./components/Forecast";
 
 export default function App() {
   const {

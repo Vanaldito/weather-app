@@ -1,7 +1,9 @@
 import { formatDate } from "../../helpers/formatDate";
 import { useWeather } from "../../hooks/useWeather";
+
 import WeatherSearch from "../WeatherSearch";
 import WeatherImg from "../WeatherImg";
+
 import LocationIcon from "../Icons/Location";
 import MyLocationIcon from "../Icons/MyLocation";
 

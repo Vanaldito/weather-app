@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getCityInfoFromLocation } from "../services/getCityInfoFromLocation";
 import { getLocationFromCity } from "../services/getLocationFromCity";
 import { getLocationFromIp } from "../services/getLocationFromIp";
+
 import { LocationInfo } from "../types";
 
 export function useLocation() {

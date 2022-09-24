@@ -1,4 +1,5 @@
 import { formatDate } from "../helpers/formatDate";
+
 import { ForecastInfo } from "../types";
 
 export async function getForecastFromLocation(

@@ -1,6 +1,8 @@
 import { useForecast } from "../../hooks/useForecast";
-import { LocationInfo } from "../../types";
+
 import WeatherImg from "../WeatherImg";
+
+import { LocationInfo } from "../../types";
 
 import "./styles.css";
 

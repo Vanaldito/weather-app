@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getWeatherFromLocation } from "../services/getWeatherFromLocation";
+
 import { LocationInfo, WeatherInfo } from "../types";
 
 export function useWeather(locationInfo: LocationInfo | null) {
