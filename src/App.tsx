@@ -1,4 +1,5 @@
 import { useLocation } from "./hooks/useLocation";
+import { useWeather } from "./hooks/useWeather";
 
 import Weather from "./components/Weather";
 import Forecast from "./components/Forecast";
@@ -11,6 +12,9 @@ export default function App() {
     requestLocationFromGeolocation,
     requestLocationFromCity,
   } = useLocation();
+  const weather = useWeather(locationInfo);
+
+  if (!weather) return <>Loading ...</>;
 
   return (
     <div className="app">
@@ -18,6 +22,7 @@ export default function App() {
         location={locationInfo}
         requestLocationFromGeolocation={requestLocationFromGeolocation}
         requestLocationFromCity={requestLocationFromCity}
+        weather={weather}
       />
       <Forecast location={locationInfo} />
     </div>

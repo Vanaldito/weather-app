@@ -1,5 +1,4 @@
 import { formatDate } from "../../helpers/formatDate";
-import { useWeather } from "../../hooks/useWeather";
 
 import WeatherSearch from "../WeatherSearch";
 import WeatherImg from "../WeatherImg";
@@ -7,7 +6,7 @@ import WeatherImg from "../WeatherImg";
 import LocationIcon from "../Icons/Location";
 import MyLocationIcon from "../Icons/MyLocation";
 
-import { LocationInfo } from "../../types";
+import { LocationInfo, WeatherInfo } from "../../types";
 
 import "./styles.css";
 
@@ -15,15 +14,15 @@ interface WeatherProps {
   location: LocationInfo | null;
   requestLocationFromGeolocation: () => void;
   requestLocationFromCity: (city: string) => void;
+  weather: WeatherInfo;
 }
 
 export default function Weather({
   location,
   requestLocationFromGeolocation,
   requestLocationFromCity,
+  weather,
 }: WeatherProps) {
-  const weather = useWeather(location);
-
   if (!weather) {
     return <>Loading...</>;
   }
