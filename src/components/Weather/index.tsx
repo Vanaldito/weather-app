@@ -1,19 +1,25 @@
 import { formatDate } from "../../helpers/formatDate";
-import { useLocation } from "../../hooks/useLocation";
 import { useWeather } from "../../hooks/useWeather";
 import WeatherSearch from "../WeatherSearch";
 import WeatherImg from "../WeatherImg";
 import LocationIcon from "../Icons/Location";
 import MyLocationIcon from "../Icons/MyLocation";
 
+import { LocationInfo } from "../../types";
+
 import "./styles.css";
 
-export default function Weather() {
-  const {
-    locationInfo: location,
-    requestLocationFromGeolocation,
-    requestLocationFromCity,
-  } = useLocation();
+interface WeatherProps {
+  location: LocationInfo | null;
+  requestLocationFromGeolocation: () => void;
+  requestLocationFromCity: (city: string) => void;
+}
+
+export default function Weather({
+  location,
+  requestLocationFromGeolocation,
+  requestLocationFromCity,
+}: WeatherProps) {
   const weather = useWeather(location);
 
   if (!weather) {
