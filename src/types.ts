@@ -7,6 +7,11 @@ export interface LocationInfo {
 export interface WeatherInfo {
   weather: string;
   temperature: number;
+  windSpeed: number;
+  windDirection: number;
+  humidity: number;
+  visibility: number;
+  pressure: number;
 }
 
 export interface ForecastInfo {

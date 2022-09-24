@@ -1,0 +1,35 @@
+.highlights {
+  background-color: #100e1d;
+  padding: 20px 20px 140px;
+}
+
+.highlights__title {
+  color: #e7e7eb;
+  font-size: 2.4rem;
+}
+
+.highlight {
+  background-color: #1e213a;
+  margin-top: 32px;
+  padding: 22px;
+}
+
+.highlight__title {
+  font-size: 1.6rem;
+  color: #e7e7eb;
+  font-weight: normal;
+  text-align: center;
+}
+
+.highlight__content {
+  text-align: center;
+  font-size: 6.4rem;
+  color: #e7e7eb;
+  font-weight: bold;
+}
+
+.highlight__unit {
+  font-size: 3.6rem;
+  font-weight: normal;
+  margin-left: 10px;
+}

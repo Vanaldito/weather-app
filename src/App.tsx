@@ -3,6 +3,7 @@ import { useWeather } from "./hooks/useWeather";
 
 import Weather from "./components/Weather";
 import Forecast from "./components/Forecast";
+import Highlights from "./components/Highlights";
 
 import "./App.css";
 
@@ -25,6 +26,7 @@ export default function App() {
         weather={weather}
       />
       <Forecast location={locationInfo} />
+      <Highlights weather={weather} />
     </div>
   );
 }
