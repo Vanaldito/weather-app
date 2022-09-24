@@ -1,3 +1,7 @@
+import { getAbbrFromDirection } from "../../helpers/getAbbrFromDirection";
+
+import ArrowIcon from "../Icons/Arrow";
+
 import { WeatherInfo } from "../../types";
 
 import "./styles.css";
@@ -15,6 +19,19 @@ export default function Highlights({ weather }: HighlightsProps) {
         <div className="highlight__content">
           {(weather.windSpeed * 2.34).toFixed(1)}
           <span className="highlight__unit">mph</span>
+        </div>
+        <div className="wind-direction">
+          <div
+            className="wind-compass"
+            style={
+              {
+                "--rotation": `${weather.windDirection}deg`,
+              } as React.CSSProperties
+            }
+          >
+            <ArrowIcon />
+          </div>
+          {getAbbrFromDirection(weather.windDirection)}
         </div>
       </div>
       <div className="highlight">
