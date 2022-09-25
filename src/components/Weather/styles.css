@@ -1,11 +1,11 @@
 .weather {
   display: grid;
+  overflow: auto;
   grid-template-rows: max-content 1fr repeat(4, max-content);
   justify-items: center;
   align-items: center;
   min-height: 100%;
   position: relative;
-  max-width: 460px;
   text-align: center;
   box-sizing: border-box;
   padding: 30px 20px 60px;

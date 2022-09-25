@@ -63,3 +63,10 @@
   border: none;
   color: #e7e7eb;
 }
+
+@media (min-width: 900px) {
+  .weather-search {
+    box-sizing: border-box;
+    width: min(50%, 500px);
+  }
+}

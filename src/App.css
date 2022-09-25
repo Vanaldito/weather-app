@@ -20,3 +20,20 @@ html {
 svg {
   display: block;
 }
+
+.desktop-right-side {
+  min-height: 100%;
+  background-color: #100e1d;
+}
+
+@media (min-width: 900px) {
+  .app {
+    display: grid;
+    grid-template-columns: min(50%, 500px) 1fr;
+  }
+
+  .desktop-right-side {
+    overflow: auto;
+    min-height: 100%;
+  }
+}

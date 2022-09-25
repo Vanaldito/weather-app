@@ -25,8 +25,10 @@ export default function App() {
         requestLocationFromCity={requestLocationFromCity}
         weather={weather}
       />
-      <Forecast location={locationInfo} />
-      <Highlights weather={weather} />
+      <div className="desktop-right-side">
+        <Forecast location={locationInfo} />
+        <Highlights weather={weather} />
+      </div>
     </div>
   );
 }
