@@ -1,13 +1,14 @@
 import { LocationInfo } from "../types";
 
 export async function getLocationFromIp(): Promise<LocationInfo> {
-  const res = await fetch("http://ip-api.com/json");
+  const res = await fetch("https://ipapi.co/json");
 
   const data = await res.json();
+  console.log(data);
 
   return {
-    lat: data.lat,
-    lon: data.lon,
+    lat: data.latitude,
+    lon: data.longitude,
     city: data.city,
   };
 }
