@@ -40,6 +40,20 @@ export default function Highlights({ weather }: HighlightsProps) {
           {weather.humidity}
           <span className="highlight__unit">%</span>
         </div>
+        <div className="humidity-percentage">
+          <div className="humidity-label">
+            <span>0</span>
+            <span>50</span>
+            <span>100</span>
+          </div>
+          <div
+            className="humidity-bar"
+            style={
+              { "--percentage": `${weather.humidity}%` } as React.CSSProperties
+            }
+          />
+          <div className="humidity-percentage-symbol">%</div>
+        </div>
       </div>
       <div className="highlight">
         <h3 className="highlight__title">Visibility</h3>
