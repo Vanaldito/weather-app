@@ -7,7 +7,7 @@ export async function getForecastFromLocation(
   lon: number
 ): Promise<Array<ForecastInfo>> {
   const res = await fetch(
-    `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${
+    `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${
       import.meta.env.VITE_OPEN_WEATHER_API_KEY
     }&units=metric`
   );

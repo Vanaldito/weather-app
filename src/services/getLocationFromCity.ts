@@ -5,7 +5,7 @@ interface LocationInfo {
 
 export async function getLocationFromCity(city: string): Promise<LocationInfo> {
   const res = await fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${
+    `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${
       import.meta.env.VITE_OPEN_WEATHER_API_KEY
     }`
   );

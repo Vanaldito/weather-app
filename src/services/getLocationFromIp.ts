@@ -4,7 +4,6 @@ export async function getLocationFromIp(): Promise<LocationInfo> {
   const res = await fetch("https://ipapi.co/json");
 
   const data = await res.json();
-  console.log(data);
 
   return {
     lat: data.latitude,
